@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pirmoji HTML paskaita">
+    <meta name="keywords" content="div, li, a">
+    <meta name="author" content="Zigmantas Račkauskas">
     <title>Nešiojamieji kompiuteriai</title>
 </head>
 
@@ -17,7 +20,8 @@
         <p>tekstas. <b>daug</b> teksto</p>
         <p>kitas tekstas</p>
         <p>Lorem ipsum <i>dolor</i> sit amet consectetur adipisicing elit. <strong>Nesciunt</strong> atque <em>maxime</em>, quod ullam ratione ducimus nobis, sint vel, odit error quasi alias maiores eos expedita omnis saepe facilis. <span>Blanditiis</span>,
-            quam.</p>
+            quam.
+        </p>
 
         <div>
             <strong>labas</strong>
@@ -71,7 +75,7 @@
             <img src="dog2.webp" alt="Turėtų būti šuo" width="400px" title="Brown dog">
             <figcaption>Šunelis</figcaption>
         </figure>
-        
+
 
         <figure>
             <figcaption>Kitas šunelis</figcaption>
@@ -119,17 +123,132 @@
 
         <h2>Forma lentelėje</h2>
 
-        <table>
-            <tr>
-                <td><label for="username">Vartotojo vardas</label></td>
-                <td><input type="text" id="username"></td>
-            </tr>
+        <!-- input -->
+        <fieldset>
+            <legend>Prisijungimas</legend>
+            <table>
+                <tr>
+                    <td><label for="username">Vartotojo vardas</label></td>
+                    <td><input type="text" id="username" autocomplete="off"></td>
+                </tr>
 
-            <tr>
-                <td><label for="password">Slaptažodis</label></td>
-                <td><input type="password" id="password"></td>
-            </tr>
-        </table>
+                <tr>
+                    <td><label for="password">Slaptažodis</label></td>
+                    <td><input type="password" id="password"></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <!-- dropdown menu -->
+        <fieldset>
+            <table>
+                <tr>
+                    <td><label for="searchengine">Mėgstamiausias paieškos sistema</label></td>
+                    <td>
+                        <select name="" id="searchengine">
+                        <option value="">...</option>
+                        <option value="">Google</option>
+                        <option value="" selected>Yahoo</option>
+                        <option value="">Bing</option>
+                    </select>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <table>
+                <tr>
+                    <td><label for="man">Vyras</label></td>
+                    <td><input type="radio" name="gender" id="man"></td>
+                </tr>
+                <tr>
+                    <td><label for="woman">Moteris</label></td>
+                    <td><input type="radio" name="gender" id="woman"></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Žinomos programavimo kalba</legend>
+            <table>
+                <tr>
+                    <td><label for="">C#</label></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Java</label></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Javascript</label></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <div>
+                <label for="">Komentaras</label>
+            </div>
+            <div>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+        </fieldset>
+    </div>
+
+    <div>
+        <h2>Formos siuntimas</h2>
+        <form action="index.html" method="POST">
+            <fieldset>
+                <legend>Prisijungimas</legend>
+                <table>
+                    <tr>
+                        <td><label for="username">Vartotojo vardas</label></td>
+                        <td><input type="text" id="username" autocomplete="off" name="username" required placeholder="Įveskite vartotojo vardą"></td>
+                    </tr>
+    
+                    <tr>
+                        <td><label for="password">Slaptažodis</label></td>
+                        <td><input type="password" id="password" name="password"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="Siųsti"></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+
+
+    <div>
+        <h2>Specialūs simboliai</h2>
+        &lt;div&gt; - šis elementas skirtas grupavimui.
+
+        &copy;&euro; tekstas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tekstas
+
+    </div>
+
+    <div>
+        <h2>Iframe naudojimas</h2>
+
+        <div>
+            <iframe src="http://www.vilniuscoding.lt" frameborder="0" width="100%" height="300px"></iframe>
+        </div>
+
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.9836000007276!2d25.290128215607687!3d54.70991168028732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd96ae1dedd637%3A0x73978617430c730c!2sUlon%C5%B3%20g.%205%2C%20Vilnius%2008240!5e0!3m2!1sen!2slt!4v1653411041460!5m2!1sen!2slt" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8MWEZLggagg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div>
+            <iframe width="725" height="453" src="https://www.tinkercad.com/embed/872hSL5TYwe?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+        </div>
 
     </div>
 
