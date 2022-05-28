@@ -1,3 +1,64 @@
+nav{
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    z-index: 9999;
+}
+
+nav div{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 50px;
+    /* left: 200px; */
+}
+
+nav div img{
+    width: 100%;
+}
+
+
+ul{
+    display: flex; 
+    list-style-type: none; /* pakeicia saraso elemento zenkliuka*/
+    justify-content: end;
+    flex-wrap: wrap;
+}
+
+a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #311b65;
+    /* margin: 5px; */
+    padding: 5px;
+    /* border-radius: 5px; */
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 12pt;
+    /* pakreiptas tekstas */
+    /* font-style: italic;  */
+    font-weight: bold;
+}
+
 a:hover{
     color: red;
+    background-color: black;
+    box-shadow: 2px 2px 10px black; /* psolinkis x asimi, poslinkis y asimi, pasklidimas, spalva*/
+}
+
+/* remelis apacioje li elemento*/
+/* li:last-child{
+    border-bottom: 1px solid black; 
+} */
+
+/* li:nth-child(2){
+    border-bottom: 1px solid black; 
+}
+
+li:nth-child(2n){
+    border-bottom: 1px solid black; 
+} */
+
+li:nth-child(2n+1){
+    border-bottom: 1px solid black; 
 }

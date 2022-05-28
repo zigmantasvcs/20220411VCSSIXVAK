@@ -1,0 +1,38 @@
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main article{
+    width: 33.33%;
+}
+
+@media screen and (max-width: 500px) {
+    main article{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 800px) {
+    main article{
+        width: 50%;
+    }
+}
+
+main article div{
+    /* border: 1px solid black; */
+    min-height: 420px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+main article div img{
+    /* width: 100%; */
+}
+
+main article div p{
+    text-align: justify;
+}
+
+
+
