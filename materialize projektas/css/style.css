@@ -1,0 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
+#services, #contacts{
+    min-height: 100vh;
+}
