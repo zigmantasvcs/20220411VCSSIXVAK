@@ -1,0 +1,16 @@
+h1, h2{
+    color: rgb(238, 62, 128);
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.lighter-color{
+    color: grey;
+}
+
+.italic{
+    font-style: italic;
+}
+

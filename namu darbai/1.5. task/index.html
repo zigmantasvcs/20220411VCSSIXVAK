@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Jūsų informacija</legend>
+        <table>
+            <tr>
+                <td>Vardas:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Pavardė:</td>
+                <td><input type="text"></td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <fieldset>
+        <legend>Klausimai</legend>
+
+        <div>
+            Kaip sužinojote apie mus?
+            <select>
+                <option value="">Google</option>
+                <option value="">Facebook</option>
+                <option value="">Twitter</option>
+            </select>
+        </div>
+
+        <p></p>
+
+        <div>
+            <div>Ar apsilankysite vėl?</div>
+            <div>
+                Taip <input type="radio" name="visit">
+                Ne <input type="radio" name="visit">
+                Galbūt <input type="radio" name="visit">
+            </div>
+        </div>
+
+        <p></p>
+
+        <div>
+            <div>Ką manote apie kursą?</div>
+            <div>
+                <textarea cols="60" rows="10" placeholder="Rašykite viską ką galvojate"></textarea>
+            </div>
+        </div>
+
+        <p></p>
+
+        <div>
+            Pažymėkite programavimo/žymėjimo kalbas su kuriomis esate susipažinę:
+            <table>
+                <tr>
+                    <td><input type="checkbox">C#</td>
+                    <td><input type="checkbox">JAVA</td>
+                    <td><input type="checkbox">PHP</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox">HTML</td>
+                    <td><input type="checkbox">CSS</td>
+                    <td><input type="checkbox">JavaScript</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox">Python</td>
+                    <td><input type="checkbox">Ruby</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+            </table>
+        </div>
+
+        <p></p>
+        
+        <div>
+            <button>Siūsti</button>
+        </div>
+    </fieldset>
+</body>
+</html>
