@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <ul></ul>
+
+    <h2>Prekės</h2>
+    <ol></ol>
+
+    <script>
+        // pagrindines js funkcijos
+        // išvesti į konsolę
+        console.log('Sveikas pasauli!');
+
+        // į pranešimo langą
+        // alert('Labas!');
+
+        // į svetainės langą
+        document.querySelector("h1").innerText = "Sveiki!";
+
+        // kintamieji
+        let x = 5;
+        console.log(x);
+
+        // kintamųjų pavadinima
+        let age = 28;
+        let ageForAdult = 30;
+        let myFirstCar1 = "Volvo";
+        let _class = "5a";
+        let anyNumber = 5.5;
+
+        // skaičiai
+        let ageAverage = (age + ageForAdult)/2;
+        console.log(ageAverage);
+
+
+        // tekstas
+        let name = "Jonas";
+        let surname = "Jonaitis";
+
+        console.log(name);
+
+        // jungimas teksto
+        let fullName = name + " " + surname;
+        let message = fullName + " prisijungė.";
+        console.log(message);
+
+        // jungimas teksto
+        let fullName1 = name.concat(" ", surname, " prisijungė.");
+        console.log(fullName1);
+
+        // pozicijos paieška tekste
+        let position = "kažkos tekstas".indexOf("ž");
+        console.log(position);
+
+        // iškirpti dalį teksto
+        let country = "Lietuva";
+        let firstThreeLetters = country.substring(0, 3);
+        console.log(firstThreeLetters);
+
+        // split ir replace
+        let text = "Dabar apsiniaukę, tuoj lis.";
+
+        text = text.replace(',', '');
+        text = text.replace('.', '');
+
+        let wordsArray = text.split(' ');
+        console.log(wordsArray);
+        document.querySelector("h1").innerText = wordsArray[0];
+
+        // boolean tipas
+        let flag = true;
+        if(!flag){
+            //alert('Vėliava pakelta!');
+        }
+
+        if(ageAverage >= 29){
+            //alert("Jūs gerokai vyresni nei maniau!");
+        }
+
+        if(ageAverage > 28 && ageAverage < 30){
+            //alert("Jūs tinkamas!");
+        }
+
+        // ciklai
+        // while
+        // let allowedAge = 0;
+        // while(allowedAge < 30){
+        //     allowedAge = prompt("Įveskite amžių", 0);
+        // }
+
+        // alert("Jūsų amžius tinkamas!");
+
+
+        // for
+        for (let index = 0; index < 5; index++) {
+            console.log(index);
+        }
+
+
+        for (let index = 0; index < wordsArray.length; index++) {
+            const word = wordsArray[index];
+
+            console.log(word);
+
+            // kiekvieno ciklo metu imame ul elementa
+            // sukuriame nauja li elementa
+            // i li elementa idedame teskta is masyvo
+            // li elementa idedame i ul elementa
+
+            let ul = document.querySelector("ul");
+
+            let li = document.createElement("li");
+
+            li.innerText = word;
+
+            ul.appendChild(li);
+        }
+
+        // masyvai
+        let shoppingCart = ["Duona", "Pienas", "Sviestas", "Pomidorai"];
+
+        shoppingCart.push("Obuoliai");
+
+        shoppingCart.sort();
+
+        for (let index = 0; index < shoppingCart.length; index++) {
+            const item = shoppingCart[index];
+
+            let ol = document.querySelector("ol");
+
+            let li = document.createElement("li");
+
+            li.innerText = item;
+
+            ol.appendChild(li);
+        }
+
+
+        // datos funkcijos
+        // d yra datos objektas
+        let d = new Date();
+        let year = d.getFullYear();
+        console.log(year);
+
+        let weekDaysInWords = ["Sekmadienis", "Pirmadienis", "Antradienis", "Trečiadienis", "Ketvirtadienis", "Penktadienis", "Šeštadienis"];
+
+        let weekDay = d.getDay();
+        console.log(weekDaysInWords[weekDay]);
+
+
+        
+
+
+
+
+
+    </script>
+</body>
+</html>
