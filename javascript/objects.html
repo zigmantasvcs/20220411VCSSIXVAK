@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            border: 1px solid black;
+        }
+
+        img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="student1">
+        <img class="photo" src="" alt="">
+        <p class="fullname"></p>
+        <p class="age"></p>
+        <p class="average"></p>
+    </div>
+
+    <div class="student2">
+        <img class="photo" src="" alt="">
+        <p class="fullname"></p>
+        <p class="age"></p>
+        <p class="average"></p>
+    </div>
+    
+
+    <script src="js/library.js"></script>
+    <script>
+        let student1 = {
+            name: "Jonas",
+            surname: "Jonaitis",
+            age: 25,
+            photo: "images/jonas.jfif",
+            grades: [10, 8, 7, 9, 4]
+        };
+
+        console.log(student1.name);
+        console.log(student1.surname);
+        console.log(student1.age);
+        console.log(student1.photo);
+        console.log(student1.grades);
+
+
+        let student2 = {
+            name: "Onutė",
+            surname: "Pakalnutė",
+            age: 25,
+            photo: "images/onute.jpg",
+            grades: [9, 8, 9, 10, 8]
+        };
+
+        console.log(student2.name);
+        console.log(student2.surname);
+        console.log(student2.age);
+        console.log(student2.photo);
+        console.log(student2.grades);
+
+        // ikelkime informacija apie student1 i puslapi
+        document.querySelector(".student1 .photo").setAttribute("src", student1.photo);
+        document.querySelector(".student1 .fullname").innerText = student1.name + " " + student1.surname;
+        document.querySelector(".student1 .age").innerHTML = "<b>Amžius:</b> " + student1.age;
+        document.querySelector(".student1 .average").innerHTML = "<b>Įvertinimų vidurkis:</b> " + calculateArrayNumbersAverage(student1.grades);
+
+
+        document.querySelector(".student2 .photo").setAttribute("src", student2.photo);
+        document.querySelector(".student2 .fullname").innerText = student2.name + " " + student2.surname;
+        document.querySelector(".student2 .age").innerHTML = "<b>Amžius:</b> " + student2.age;
+        document.querySelector(".student2 .average").innerHTML = "<b>Įvertinimų vidurkis:</b> " + calculateArrayNumbersAverage(student2.grades);
+
+    </script>
+</body>
+</html>

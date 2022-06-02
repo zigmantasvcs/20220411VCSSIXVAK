@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <input type="text" name="" id="username">
+    <button id="btnOk">OK</button>
+    <p></p>
 
     <script src="js/library.js"></script>
     <script>
@@ -15,11 +19,30 @@
         // printUserName();
         // printUserName();
 
-        let user = getUserName();
-        
-        let position = user.indexOf('o');
-        console.log(position);
+        // let user = getUserName();
 
+        // let position = user.indexOf('o');
+        // console.log(position);
+
+        // let userExist = doesUserExist("jonas");
+        // console.log(userExist);
+
+        //console.log(doesUserExist("jonas"));
+
+        document.querySelector("#btnOk").addEventListener("click", function() {
+            let user = document.querySelector("#username").value;
+
+            printUserValidationMessage(user);
+        })
+
+        document.querySelector("#username").addEventListener("keypress", function(event) {
+            let user = document.querySelector("#username").value;
+
+            if (event.key == "Enter") {
+                printUserValidationMessage(user);
+            }
+        })
     </script>
 </body>
+
 </html>
