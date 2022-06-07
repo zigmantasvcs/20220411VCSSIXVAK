@@ -1,0 +1,91 @@
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item{
+    width: 250px;
+    box-shadow: 2px 2px 5px black;
+    margin: 10px;
+}
+
+img{
+    width: 100%;
+}
+
+@media screen and (max-width: 600px){
+    .container{
+        width: 100%;
+        margin: auto;
+    }
+    .item{
+        width: 100%;
+    }
+}
+
+.price{
+    display: flex;
+    
+}
+
+.discount{
+    padding: 20px;
+    background-color: orange;
+    margin: 10px;
+    color: white;
+}
+
+.current{
+    margin: 10px;
+    font-size: 20pt;
+}
+
+del{
+    color:silver;
+    font-size: 16pt;
+}
+.button{
+    margin: 10px;
+}
+
+.button a{
+    color: white;
+    background-color: green;
+    padding: 10px 50px;
+    text-decoration: none;
+    font-size: 14pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.price-info{
+    font-size: 10pt;
+    color: silver;
+    margin: 10px;
+    padding-top: 50px;
+}
+
+.description1, .description2{
+    margin: 10px;
+}
+
+.description1{
+    color: steelblue;
+}
+
+.clip-star {
+    background: gold;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    
+}
+
+.stars{
+    margin-left: 10px;
+}

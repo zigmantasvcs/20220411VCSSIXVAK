@@ -14,6 +14,13 @@ function getStudents(){
             age: 25,
             photo: "images/onute.jpg",
             grades: [9, 8, 9, 10, 8]
+        },
+        {
+            name: "Onutė",
+            surname: "Pakalnutė",
+            age: 25,
+            photo: "images/onute.jpg",
+            grades: [9, 8, 9, 10, 8]
         }
     ];
 

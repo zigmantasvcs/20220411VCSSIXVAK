@@ -5,16 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            border: 1px solid black;
+        }
+
+        img{
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container"></div>
 
     <script src="js/studentService.js"></script>
+    <script src="js/library.js"></script>
     <script>
         let students = getStudents();
 
-        console.log(students[0].name);
-        console.log(students[1].name);
+        // console.log(students[0].name);
+        // console.log(students[1].name);
+
+        for (let index = 0; index < students.length; index++) {
+            const student = students[index];
+            
+            let template = '<div class="student1"><img class="photo" src="{{photo}}" alt=""><p class="fullname">{{fullname}}</p><p class="age">{{age}}</p><p class="average">{{average}}</p></div>';
+
+            template = template.replace("{{photo}}", student.photo);
+            template = template.replace("{{fullname}}", student.name.concat(" ", student.surname));
+            template = template.replace("{{age}}", "Amžius: " + student.age);
+
+            let average = calculateArrayNumbersAverage(student.grades);
+            template = template.replace("{{average}}", average);
+
+            document.querySelector(".container").innerHTML += template;
+
+        }
 
 
     </script>

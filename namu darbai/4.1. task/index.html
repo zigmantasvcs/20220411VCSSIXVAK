@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: mano;
+            src: url(Allura-Regular.ttf);
+        }
+
+        h1{
+            font-family: mano;
+        }
+
+        .calendar, .week{
+            display: flex;
+            width: 710px;
+        }
+
+        .calendar{
+            flex-wrap: wrap;
+        }
+
+        .day, .weekend{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .weekend{
+            background-color: yellow;
+        }
+
+        .event{
+            background-color: violet;
+        }
+
+        .event:hover{
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Gegužė</h1>
+    <div class="calendar">
+        <div class="week">
+            <div class="day">
+                <div></div>
+            </div>
+            <div class="day">
+                <div></div>
+            </div>
+            <div class="day">
+                <div></div>
+            </div>
+            <div class="day">
+                <div></div>
+            </div>
+            <div class="day">
+                <div></div>
+            </div>
+            <div class="day weekend">
+                <div>1</div>
+            </div>
+            <div class="day weekend">
+                <div>2</div>
+            </div>
+        </div>
+
+        <div class="week">
+            <div class="day">
+                <div>3</div>
+            </div>
+            <div class="day">
+                <div>4</div>
+            </div>
+            <div class="day">
+                <div>5</div>
+            </div>
+            <div class="day">
+                <div>6</div>
+            </div>
+            <div class="day">
+                <div>7</div>
+            </div>
+            <div class="day weekend">
+                <div>8</div>
+                <div class="event">Gimtadienis</div>
+            </div>
+            <div class="day weekend">
+                <div>9</div>
+            </div>
+        </div>
+
+        <div class="week">
+            <div class="day">
+                <div>10</div>
+            </div>
+            <div class="day">
+                <div>11</div>
+            </div>
+            <div class="day">
+                <div>12</div>
+            </div>
+            <div class="day">
+                <div>13</div>
+            </div>
+            <div class="day">
+                <div>14</div>
+            </div>
+            <div class="day weekend">
+                <div>15</div>
+            </div>
+            <div class="day weekend">
+                <div>16</div>
+                <div class="event">Kelionė</div>
+            </div>
+        </div>
+        
+        <div class="week">
+            <div class="day">
+                <div>17</div>
+            </div>
+            <div class="day">
+                <div>18</div>
+            </div>
+            <div class="day">
+                <div>19</div>
+            </div>
+            <div class="day">
+                <div>20</div>
+            </div>
+            <div class="day">
+                <div>21</div>
+            </div>
+            <div class="day weekend">
+                <div>22</div>
+            </div>
+            <div class="day weekend">
+                <div>23</div>
+            </div>
+        </div>
+
+        <div class="week">
+            <div class="day">
+                <div>24</div>
+            </div>
+            <div class="day">
+                <div>25</div>
+            </div>
+            <div class="day">
+                <div>26</div>
+            </div>
+            <div class="day">
+                <div>27</div>
+            </div>
+            <div class="day">
+                <div>28</div>
+            </div>
+            <div class="day weekend">
+                <div>29</div>
+            </div>
+            <div class="day weekend">
+                <div>30</div>
+            </div>
+        </div>
+
+        <div class="week">
+            <div class="day">
+                <div>31</div>
+            </div>
+            <div class="day">
+                <div></div>
+            </div>
+            <div class="day">
+                <div></div>
+            </div>
+            <div class="day">
+                <div></div>
+            </div>
+            <div class="day">
+                <div></div>
+            </div>
+            <div class="day weekend">
+                <div></div>
+            </div>
+            <div class="day weekend">
+                <div></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -23,15 +23,21 @@
 </head>
 
 <body>
+
     <!-- meniu pradzia -->
     <nav>
+        <select name="" id="languageChanger">
+            <option value="en">en</option>
+            <option value="lt">lt</option>
+        </select>
+
         <div>
             <img src="images/logo.png" alt="">
         </div>
         <ul>
-            <li><a href="">Pagrindinis</a></li>
-            <li><a href="">Paslaugos</a></li>
-            <li><a href="">Galerija</a></li>
+            <li><a href="" translation-menu-main>Pagrindinis</a></li>
+            <li><a href="" translation-menu-services>Paslaugos</a></li>
+            <li><a href="" translation-menu-gallery>Galerija</a></li>
             <li><a href="">Prekės</a></li>
             <li><a href="">Savitarna</a></li>
             <li><a href="">Media</a></li>
@@ -56,34 +62,53 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum fugiat nulla, facere nostrum vel excepturi in odit. Autem aspernatur ea eveniet, beatae dolores totam unde accusantium perspiciatis quae, deserunt ab!</p>
 
 
-        <main>
-            <article>
-                <div>
-                    <img src="https://picsum.photos/500/300?random=1">
-                    <h2>Pirmas</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut mollitia labore recusandae quae magnam harum repellendus impedit, officia aliquid ullam corporis saepe ea id obcaecati. Aspernatur provident distinctio necessitatibus modi.</p>
-                </div>
-            </article>
-
-            <article>
-                <div>
-                    <img src="https://picsum.photos/500/300?random=2">
-                    <h2>Antras</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque animi corporis dignissimos delectus vero sint ratione asperiores unde adipisci explicabo! Accusamus corporis beatae culpa expedita iure odio reprehenderit dolores placeat!</p>
-                </div>
-            </article>
-
-            <article>
-                <div>
-                    <img src="https://picsum.photos/500/300?random=3">
-                    <h2>Trečias</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam atque enim sit minima corrupti? Expedita sint quae explicabo sapiente dolores, nesciunt voluptatem cupiditate, exercitationem accusamus laboriosam eaque blanditiis, voluptatibus
-                        amet.</p>
-                </div>
-            </article>
-        </main>
+        <main></main>
         
     </div>
+
+
+    <script src="js/blogsService.js"></script>
+    <script src="js/translations.js"></script>
+    <script>
+        let blogs = getTop3Blogs();
+        console.log(blogs);
+
+        for (let index = 0; index < blogs.length; index++) {
+            const blog = blogs[index];
+
+            let template = '<article><div><img src="{{photo}}"><h2>{{title}}</h2><p>{{text}}</p></div></article>';
+
+            template = template.replace("{{photo}}", blog.image);
+            template = template.replace("{{title}}", blog.title);
+            template = template.replace("{{text}}", blog.text);
+
+            document.querySelector("main").innerHTML += template;
+        }
+
+    </script>
+
+    <script>
+        let localStorage = window.localStorage;
+
+        let lang = localStorage.getItem("lang");
+
+        console.log(lang);
+
+        if(!lang){
+            lang = document.querySelector("#languageChanger").value;
+        }
+        else{
+            document.querySelector("#languageChanger").value = lang;    
+        }
+
+        doTranslations(lang);
+
+        document.querySelector("#languageChanger").addEventListener("change", function(){
+            localStorage.setItem("lang", this.value);
+            doTranslations(this.value); // perduodama en arba lt
+        })
+
+    </script>
 
 </body>
 
